@@ -20,53 +20,53 @@ import {
   Linkedin,
   Mail,
   ArrowRight,
-  FileText,
-} from "lucide-react";
+  FileText } from
+"lucide-react";
 
 const projects = [
-  {
-    title: "Do UX ao UI: Meu Primeiro Sistema",
-    description:
-      "Um desafio que me tirou da zona de conforto e me levou a explorar o design de interface de forma muito mais técnica.",
-    tags: ["UX Design", "UI Design", "SaaS"],
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80",
-    link: "https://medium.com/@larissafitipaldi/de-ux-a-ui-meu-primeiro-sistema-saas-9d43ebf92f7a",
-  },
-  {
-    title: "UI e Mockup Interativo",
-    description:
-      "Interface para gerenciamento de plugins no CRM. Objetivo: facilitar busca, compreensão e ativação dos plugins.",
-    tags: ["UI Design", "Mockup", "CRM"],
-    image:
-      "https://images.unsplash.com/photo-1559028012-481c04fa702d?w=600&q=80",
-    link: "https://www.behance.net/gallery/230071915/Projeto-UXUI",
-  },
-  {
-    title: "Fluxos Conversacionais",
-    description:
-      "Criação de experiências conversacionais que conectam marcas aos seus clientes através de chatbots inteligentes.",
-    tags: ["Chatbot", "UX Writing", "Conversational"],
-    image:
-      "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&q=80",
-    link: "#",
-  },
-];
+{
+  title: "Do UX ao UI: Meu Primeiro Sistema",
+  description:
+  "Um desafio que me tirou da zona de conforto e me levou a explorar o design de interface de forma muito mais técnica.",
+  tags: ["UX Design", "UI Design", "SaaS"],
+  image:
+  "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80",
+  link: "https://medium.com/@larissafitipaldi/de-ux-a-ui-meu-primeiro-sistema-saas-9d43ebf92f7a"
+},
+{
+  title: "UI e Mockup Interativo",
+  description:
+  "Interface para gerenciamento de plugins no CRM. Objetivo: facilitar busca, compreensão e ativação dos plugins.",
+  tags: ["UI Design", "Mockup", "CRM"],
+  image:
+  "https://images.unsplash.com/photo-1559028012-481c04fa702d?w=600&q=80",
+  link: "https://www.behance.net/gallery/230071915/Projeto-UXUI"
+},
+{
+  title: "Fluxos Conversacionais",
+  description:
+  "Criação de experiências conversacionais que conectam marcas aos seus clientes através de chatbots inteligentes.",
+  tags: ["Chatbot", "UX Writing", "Conversational"],
+  image:
+  "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&q=80",
+  link: "#"
+}];
+
 
 const skills = [
-  { icon: Bot, name: "Chatbots" },
-  { icon: MessageSquare, name: "Fluxos Conversacionais" },
-  { icon: Sparkles, name: "IA & Automação" },
-  { icon: Palette, name: "UX/UI Design" },
-  { icon: PenTool, name: "UX Writing" },
-  { icon: Figma, name: "Figma" },
-  { icon: Code, name: "Prototipação" },
-  { icon: Workflow, name: "Jornada do Usuário" },
-  { icon: Brain, name: "Design Thinking" },
-  { icon: Terminal, name: "Low-code/No-code" },
-  { icon: Users, name: "Research" },
-  { icon: Zap, name: "Agile" },
-];
+{ icon: Bot, name: "Chatbots" },
+{ icon: MessageSquare, name: "Fluxos Conversacionais" },
+{ icon: Sparkles, name: "IA & Automação" },
+{ icon: Palette, name: "UX/UI Design" },
+{ icon: PenTool, name: "UX Writing" },
+{ icon: Figma, name: "Figma" },
+{ icon: Code, name: "Prototipação" },
+{ icon: Workflow, name: "Jornada do Usuário" },
+{ icon: Brain, name: "Design Thinking" },
+{ icon: Terminal, name: "Low-code/No-code" },
+{ icon: Users, name: "Research" },
+{ icon: Zap, name: "Agile" }];
+
 
 const Index = () => {
   return (
@@ -77,22 +77,22 @@ const Index = () => {
       <section
         id="hero"
         className="min-h-screen flex items-center pt-20 pb-16"
-        style={{ background: "var(--gradient-hero)" }}
-      >
+        style={{ background: "var(--gradient-hero)" }}>
+        
         <div className="max-w-6xl mx-auto px-6 w-full">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left - Text */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-            >
+              transition={{ duration: 0.6 }}>
+              
               <motion.span
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-medium mb-6"
-              >
+                className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-medium mb-6">
+                
                 <Bot className="w-4 h-4" />
                 Bot Specialist
               </motion.span>
@@ -113,8 +113,8 @@ const Index = () => {
                   href="#projects"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-primary text-primary-foreground font-medium rounded-xl hover:glow-primary transition-shadow"
-                >
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-primary text-primary-foreground font-medium rounded-xl hover:glow-primary transition-shadow">
+                  
                   Ver Projetos
                   <ArrowRight className="w-4 h-4" />
                 </motion.a>
@@ -123,8 +123,8 @@ const Index = () => {
                   href="#contact"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-muted text-foreground font-medium rounded-xl border border-border hover:border-primary/50 transition-colors"
-                >
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-muted text-foreground font-medium rounded-xl border border-border hover:border-primary/50 transition-colors">
+                  
                   Fale Comigo
                 </motion.a>
               </div>
@@ -135,8 +135,8 @@ const Index = () => {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="animate-float"
-            >
+              className="animate-float">
+              
               <ChatAnimation />
             </motion.div>
           </div>
@@ -151,8 +151,8 @@ const Index = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="max-w-3xl mx-auto text-center"
-          >
+            className="max-w-3xl mx-auto text-center">
+            
             <span className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/10 rounded-full text-secondary text-sm font-medium mb-6">
               <Sparkles className="w-4 h-4" />
               Sobre mim
@@ -163,34 +163,34 @@ const Index = () => {
               <span className="text-gradient-secondary">abrem caminhos</span>
             </h2>
 
-            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Com experiência em UX Design, UX Writing e fluxos conversacionais, 
-              ajudo marcas a criar conexões autênticas com seus clientes. 
-              Atualmente trabalho como <strong className="text-foreground">Bot Specialist</strong>, 
+            <p className="text-lg leading-relaxed mb-8 font-serif text-destructive-foreground bg-primary-foreground"> Conheça meu trabalho e como minhas experiências em diferentes áreas do design me ajudaram a dar voz a dezenas de marcas. ​ Atualmente trabalho como Bot Specialist, combinando design, automações e inteligência artificial para criar experiências conversacionais que realmente resolvem problemas.
+
+
+
+
+
+
+
+              <strong className="text-foreground">Bot Specialist</strong>, 
               combinando design, automações e inteligência artificial para criar 
               experiências conversacionais que encantam.
             </p>
 
             <div className="grid grid-cols-3 gap-6 mt-12">
-              {[
-                { number: "30+", label: "Projetos" },
-                { number: "5+", label: "Anos de experiência" },
-                { number: "∞", label: "Conversas criadas" },
-              ].map((stat, i) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.1 }}
-                  viewport={{ once: true }}
-                  className="text-center"
-                >
+              {[{ number: "30+", label: "Projetos" }, { number: "5+", label: "Anos de experiência" }, { number: "∞", label: "Conversas criadas" }].map((stat, i) => <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center">
+                
                   <p className="font-display text-3xl font-bold text-gradient-primary">
                     {stat.number}
                   </p>
                   <p className="text-muted-foreground text-sm mt-1">{stat.label}</p>
                 </motion.div>
-              ))}
+              )}
             </div>
           </motion.div>
         </div>
@@ -204,8 +204,8 @@ const Index = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-center mb-12"
-          >
+            className="text-center mb-12">
+            
             <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-medium mb-6">
               <Palette className="w-4 h-4" />
               Portfólio
@@ -217,9 +217,9 @@ const Index = () => {
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects.map((project, index) => (
-              <ProjectCard key={project.title} {...project} index={index} />
-            ))}
+            {projects.map((project, index) =>
+            <ProjectCard key={project.title} {...project} index={index} />
+            )}
           </div>
         </div>
       </section>
@@ -232,8 +232,8 @@ const Index = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-center mb-12"
-          >
+            className="text-center mb-12">
+            
             <span className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/10 rounded-full text-secondary text-sm font-medium mb-6">
               <Zap className="w-4 h-4" />
               Habilidades
@@ -245,9 +245,9 @@ const Index = () => {
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {skills.map((skill, index) => (
-              <SkillBadge key={skill.name} {...skill} index={index} />
-            ))}
+            {skills.map((skill, index) =>
+            <SkillBadge key={skill.name} {...skill} index={index} />
+            )}
           </div>
         </div>
       </section>
@@ -260,8 +260,8 @@ const Index = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-center mb-12"
-          >
+            className="text-center mb-12">
+            
             <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-medium mb-6">
               <FileText className="w-4 h-4" />
               Currículo
@@ -282,8 +282,8 @@ const Index = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-          >
+            viewport={{ once: true }}>
+            
             <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-medium mb-6">
               <MessageSquare className="w-4 h-4" />
               Contato
@@ -305,8 +305,8 @@ const Index = () => {
                 href="mailto:larissafitipaldi8@gmail.com"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-primary text-primary-foreground font-medium rounded-xl hover:glow-primary transition-shadow"
-              >
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-primary text-primary-foreground font-medium rounded-xl hover:glow-primary transition-shadow">
+                
                 <Mail className="w-5 h-5" />
                 Enviar Email
               </motion.a>
@@ -317,8 +317,8 @@ const Index = () => {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-muted text-foreground font-medium rounded-xl border border-border hover:border-primary/50 transition-colors"
-              >
+                className="inline-flex items-center gap-2 px-6 py-3 bg-muted text-foreground font-medium rounded-xl border border-border hover:border-primary/50 transition-colors">
+                
                 <Linkedin className="w-5 h-5" />
                 LinkedIn
               </motion.a>
@@ -335,8 +335,8 @@ const Index = () => {
           </p>
         </div>
       </footer>
-    </div>
-  );
+    </div>);
+
 };
 
 export default Index;
