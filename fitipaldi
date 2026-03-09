@@ -1,0 +1,342 @@
+import { motion } from "framer-motion";
+import { Navbar } from "@/components/Navbar";
+import { ChatAnimation } from "@/components/ChatAnimation";
+import { ProjectCard } from "@/components/ProjectCard";
+import { SkillBadge } from "@/components/SkillBadge";
+import { ResumeTimeline } from "@/components/ResumeTimeline";
+import {
+  Bot,
+  MessageSquare,
+  Sparkles,
+  Palette,
+  Code,
+  Workflow,
+  Zap,
+  Users,
+  Brain,
+  PenTool,
+  Figma,
+  Terminal,
+  Linkedin,
+  Mail,
+  ArrowRight,
+  FileText,
+} from "lucide-react";
+
+const projects = [
+  {
+    title: "Do UX ao UI: Meu Primeiro Sistema",
+    description:
+      "Um desafio que me tirou da zona de conforto e me levou a explorar o design de interface de forma muito mais técnica.",
+    tags: ["UX Design", "UI Design", "SaaS"],
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80",
+    link: "https://medium.com/@larissafitipaldi/de-ux-a-ui-meu-primeiro-sistema-saas-9d43ebf92f7a",
+  },
+  {
+    title: "UI e Mockup Interativo",
+    description:
+      "Interface para gerenciamento de plugins no CRM. Objetivo: facilitar busca, compreensão e ativação dos plugins.",
+    tags: ["UI Design", "Mockup", "CRM"],
+    image:
+      "https://images.unsplash.com/photo-1559028012-481c04fa702d?w=600&q=80",
+    link: "https://www.behance.net/gallery/230071915/Projeto-UXUI",
+  },
+  {
+    title: "Fluxos Conversacionais",
+    description:
+      "Criação de experiências conversacionais que conectam marcas aos seus clientes através de chatbots inteligentes.",
+    tags: ["Chatbot", "UX Writing", "Conversational"],
+    image:
+      "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&q=80",
+    link: "#",
+  },
+];
+
+const skills = [
+  { icon: Bot, name: "Chatbots" },
+  { icon: MessageSquare, name: "Fluxos Conversacionais" },
+  { icon: Sparkles, name: "IA & Automação" },
+  { icon: Palette, name: "UX/UI Design" },
+  { icon: PenTool, name: "UX Writing" },
+  { icon: Figma, name: "Figma" },
+  { icon: Code, name: "Prototipação" },
+  { icon: Workflow, name: "Jornada do Usuário" },
+  { icon: Brain, name: "Design Thinking" },
+  { icon: Terminal, name: "Low-code/No-code" },
+  { icon: Users, name: "Research" },
+  { icon: Zap, name: "Agile" },
+];
+
+const Index = () => {
+  return (
+    <div className="min-h-screen bg-background">
+      <Navbar />
+
+      {/* Hero Section */}
+      <section
+        id="hero"
+        className="min-h-screen flex items-center pt-20 pb-16"
+        style={{ background: "var(--gradient-hero)" }}
+      >
+        <div className="max-w-6xl mx-auto px-6 w-full">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left - Text */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <motion.span
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+                className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-medium mb-6"
+              >
+                <Bot className="w-4 h-4" />
+                Bot Specialist
+              </motion.span>
+
+              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+                Experiências que{" "}
+                <span className="text-gradient-primary">conectam</span>
+              </h1>
+
+              <p className="text-muted-foreground text-lg md:text-xl mb-8 max-w-lg">
+                Olá! Sou a <strong className="text-foreground">Larissa Fitipaldi</strong> — 
+                Designer de Produto especialista em chatbots, automações e IA. 
+                Transformo conversas em experiências memoráveis.
+              </p>
+
+              <div className="flex flex-wrap gap-4">
+                <motion.a
+                  href="#projects"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-primary text-primary-foreground font-medium rounded-xl hover:glow-primary transition-shadow"
+                >
+                  Ver Projetos
+                  <ArrowRight className="w-4 h-4" />
+                </motion.a>
+
+                <motion.a
+                  href="#contact"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-muted text-foreground font-medium rounded-xl border border-border hover:border-primary/50 transition-colors"
+                >
+                  Fale Comigo
+                </motion.a>
+              </div>
+            </motion.div>
+
+            {/* Right - Chat Animation */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="animate-float"
+            >
+              <ChatAnimation />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="py-24 bg-card">
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="max-w-3xl mx-auto text-center"
+          >
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/10 rounded-full text-secondary text-sm font-medium mb-6">
+              <Sparkles className="w-4 h-4" />
+              Sobre mim
+            </span>
+
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
+              Palavras certas{" "}
+              <span className="text-gradient-secondary">abrem caminhos</span>
+            </h2>
+
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              Com experiência em UX Design, UX Writing e fluxos conversacionais, 
+              ajudo marcas a criar conexões autênticas com seus clientes. 
+              Atualmente trabalho como <strong className="text-foreground">Bot Specialist</strong>, 
+              combinando design, automações e inteligência artificial para criar 
+              experiências conversacionais que encantam.
+            </p>
+
+            <div className="grid grid-cols-3 gap-6 mt-12">
+              {[
+                { number: "30+", label: "Projetos" },
+                { number: "5+", label: "Anos de experiência" },
+                { number: "∞", label: "Conversas criadas" },
+              ].map((stat, i) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.1 }}
+                  viewport={{ once: true }}
+                  className="text-center"
+                >
+                  <p className="font-display text-3xl font-bold text-gradient-primary">
+                    {stat.number}
+                  </p>
+                  <p className="text-muted-foreground text-sm mt-1">{stat.label}</p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section id="projects" className="py-24">
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-medium mb-6">
+              <Palette className="w-4 h-4" />
+              Portfólio
+            </span>
+
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
+              Projetos em destaque
+            </h2>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {projects.map((project, index) => (
+              <ProjectCard key={project.title} {...project} index={index} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Skills Section */}
+      <section id="skills" className="py-24 bg-card">
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/10 rounded-full text-secondary text-sm font-medium mb-6">
+              <Zap className="w-4 h-4" />
+              Habilidades
+            </span>
+
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
+              Skills & Ferramentas
+            </h2>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {skills.map((skill, index) => (
+              <SkillBadge key={skill.name} {...skill} index={index} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Resume Section */}
+      <section id="resume" className="py-24">
+        <div className="max-w-4xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-medium mb-6">
+              <FileText className="w-4 h-4" />
+              Currículo
+            </span>
+
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
+              Minha <span className="text-gradient-primary">Trajetória</span>
+            </h2>
+          </motion.div>
+
+          <ResumeTimeline />
+        </div>
+      </section>
+      {/* Contact Section */}
+      <section id="contact" className="py-24">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-medium mb-6">
+              <MessageSquare className="w-4 h-4" />
+              Contato
+            </span>
+
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
+              Vamos criar algo{" "}
+              <span className="text-gradient-primary">incrível</span> juntos?
+            </h2>
+
+            <p className="text-muted-foreground text-lg mb-10 max-w-2xl mx-auto">
+              Estou sempre aberta a novos projetos e oportunidades. 
+              Se você quer criar experiências conversacionais que conectam, 
+              vamos conversar!
+            </p>
+
+            <div className="flex flex-wrap justify-center gap-4">
+              <motion.a
+                href="mailto:larissafitipaldi8@gmail.com"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-primary text-primary-foreground font-medium rounded-xl hover:glow-primary transition-shadow"
+              >
+                <Mail className="w-5 h-5" />
+                Enviar Email
+              </motion.a>
+
+              <motion.a
+                href="https://www.linkedin.com/in/larissa-fitipaldi/"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center gap-2 px-6 py-3 bg-muted text-foreground font-medium rounded-xl border border-border hover:border-primary/50 transition-colors"
+              >
+                <Linkedin className="w-5 h-5" />
+                LinkedIn
+              </motion.a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-8 border-t border-border">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <p className="text-muted-foreground text-sm">
+            © {new Date().getFullYear()} Larissa Fitipaldi. Feito com 💜 e muito café.
+          </p>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default Index;
