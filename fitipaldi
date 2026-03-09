@@ -4,6 +4,7 @@ import { ChatAnimation } from "@/components/ChatAnimation";
 import { ProjectCard } from "@/components/ProjectCard";
 import { SkillBadge } from "@/components/SkillBadge";
 import { ResumeTimeline } from "@/components/ResumeTimeline";
+import avatarImage from "@/assets/avatar.png";
 import {
   Bot,
   MessageSquare,
@@ -163,6 +164,16 @@ const Index = () => {
               <span className="text-gradient-secondary">abrem caminhos</span>
             </h2>
 
+            
+
+
+
+
+
+
+
+            
+
             <p className="text-lg leading-relaxed mb-8 font-serif text-destructive-foreground bg-primary-foreground">Conheça meu trabalho e como minhas experiências em diferentes áreas do design me ajudaram a dar voz a dezenas de marcas. Atualmente trabalho como Bot Specialist, combinando design, automações e inteligência artificial para criar experiências conversacionais que realmente resolvem problemas.
 
 
@@ -171,9 +182,9 @@ const Index = () => {
 
 
 
-              <strong className="text-foreground">Bot Specialist</strong>, 
-              combinando design, automações e inteligência artificial para criar 
-              experiências conversacionais que encantam.
+
+
+
             </p>
 
             <div className="grid grid-cols-3 gap-6 mt-12">
@@ -350,30 +361,40 @@ const Index = () => {
               vamos conversar!
             </p>
 
-            <div className="flex flex-wrap justify-center gap-4">
-              <motion.a
+             <div className="flex flex-wrap justify-center gap-4">
+               <motion.a
                 href="mailto:larissafitipaldi8@gmail.com"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-primary text-primary-foreground font-medium rounded-xl hover:glow-primary transition-shadow">
-                
-                <Mail className="w-5 h-5" />
-                Enviar Email
-              </motion.a>
+                 
+                 <Mail className="w-5 h-5" />
+                 Enviar Email
+               </motion.a>
 
-              <motion.a
+               <motion.a
                 href="https://www.linkedin.com/in/larissa-fitipaldi/"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center gap-2 px-6 py-3 bg-muted text-foreground font-medium rounded-xl border border-border hover:border-primary/50 transition-colors">
-                
-                <Linkedin className="w-5 h-5" />
-                LinkedIn
-              </motion.a>
-            </div>
-          </motion.div>
+                 
+                 <Linkedin className="w-5 h-5" />
+                 LinkedIn
+               </motion.a>
+             </div>
+
+             <motion.img
+              src={avatarImage}
+              alt="Larissa Fitipaldi"
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="w-32 h-32 rounded-full object-cover mx-auto mt-12 border-4 border-primary/20" />
+            
+           </motion.div>
         </div>
       </section>
 
